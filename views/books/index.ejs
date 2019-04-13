@@ -1,0 +1,31 @@
+ <%# Section : Search %>
+<h2>Search Book</h2>
+<form method="get" action="/books">
+    <div>
+        <label>Title</label>
+        <input type="text" name="title" placeholder="Search book by title ... ">
+    </div>
+    <div>
+        <label>Published After</label>
+        <input type="date" name="publishedAfter" value="<%= searchOptions.publishedAfter %>">
+    </div>
+    <div>
+        <label>Published Before</label>
+        <input type="date" name="publishedBefore" value="<%= searchOptions.publishedBefore %>">
+    </div>
+    <input type="submit" value="Search Books">
+</form>
+
+<%# Search : Display Book Lists %>
+<%if(books && books.length > 0 ){%>
+    <%books.forEach(function(book){%>
+        <div style="width:100px;">
+            <img style="height:150px;" src="<%=book.coverImgePath%>">
+            <p>
+            <%=book.title.length > 10 ? (book.title.substring(0,10) + '...') : book.title %>
+            </p>
+        </div>
+   <%})%>
+<%}else{%>
+    <p>Threre' no books</p>
+<%}%>
