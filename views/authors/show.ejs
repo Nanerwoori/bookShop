@@ -1,0 +1,23 @@
+<div>
+    <span class="author-name"><%=author.name%></span>
+    <a href="/authors/<%=author.id%>/edit">
+        <i class="fas fa-pencil-alt"></i>
+    </a>
+    <form class="form-delete" method="post" action="/authors/<%=author.id%>?_method=DELETE">
+        <button type="submit"><i class="fas fa-eraser"></i></button>
+    </form>
+</div>
+
+
+
+<%if(typeof books === 'object' && books instanceof Array && books.length > 0 ){%>
+    <h3>Books by <%=author.name%></h3>
+    <%books.forEach(function(book){%>
+        <div style="width:100px;">
+        <img height="150px" width="100px" alt="No Image" src="data:<%=book.coverImageType%>;charset=utf-8;base64,<%=book.coverImage.toString('base64')%>">
+        <span><%=book.title.length > 10 ? book.title.substring(0,10) + ' ... ' : book.title %></span>
+        </div>
+    <%})%>
+<%}else{%>
+    <p>There's no books </p>
+<%}%>

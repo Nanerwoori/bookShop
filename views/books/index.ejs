@@ -20,7 +20,7 @@
 <%if(books && books.length > 0 ){%>
     <%books.forEach(function(book){%>
         <div style="width:100px;">
-            <img style="height:150px;" src="<%=book.coverImgePath%>">
+            <img height="150px" width="100px"  src="<%=book.coverImgePath%>">
             <p>
             <%=book.title.length > 10 ? (book.title.substring(0,10) + '...') : book.title %>
             </p>

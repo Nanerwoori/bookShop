@@ -13,6 +13,22 @@ body {
   width: 85%;
   margin: 0 auto;
 }
+
+.form-delete {
+  display: inline;
+}
+
+.form-delete button[type="submit"] {
+  background: transparent;
+  outline: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.form-delete i {
+  font-size: 16px;
+}
+
 ul {
   list-style: none;
 }
@@ -46,4 +62,26 @@ nav ul li:hover a {
 }
 main {
   height: 90vh;
+}
+
+ul.list {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+  margin-top: 1.5rem;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.7);
+  width: 400px;
+}
+ul.list li {
+  padding: 0.6rem;
+}
+ul.list .list-header {
+  height: 40px;
+  font-weight: 200;
+  background: #f4f4f4;
+}
+ul.list .list-header h3 {
+  font-weight: 200;
+}
+
+ul.list li:hover {
+  background: 0, 0, 0, rgba(0, 0, 0, 0.2);
 }

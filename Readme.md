@@ -1,18 +1,6 @@
-TODO : Complete
-
-[ O ] => 1. Create an author model
-[ O ] => 2. Create an author controller
-[ O ] => 3. Create author views
-[ O ] => 4. Interact with our database to find and create authors
-[ O ] => 5. Handle validation errors
-[ O ] => 6. Setup a shared page header
-
-TODO : Not Complete
-
-[ O ] => 1. Create a book model
-[ O ] => 2. Create a book controller
-[ O ] => 3. Create book views
-[ O ] => 4. Interact with our database to find and create books
-[ O ] => 5. Handle validation errors
-[ O ] => 6. Setup file upload
-[ O ] => 7. Store uploaded files
+[ O ] => 1. Add routes to the author's controller
+[ O ] => 2. Add views for the author's views
+[ O ] => 3. Add data validation checks for deletion
+[ O ] => 4. Create a delete form
+[ O ] => 5. Interact with our database to update and delete authors
+[ O ] => 6. Finish the navigation for authors in our views

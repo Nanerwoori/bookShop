@@ -5,11 +5,20 @@
     <button type="submit">Search</button>
 </form>
 <%if(authors && authors.length > 0 ){%>
-
+    <ul class="list">
+    <li class="list-header">
+        <h3>Our's Authors</h3>
+    </li>
     <%authors.forEach(author=>{%>
-        <div><%-author.name%></div>
-    <%})%>
+        <a href="/authors/<%=author.id%>">
+            <li>
+                <span><%-author.name%></span>
+                <i class="far fa-arrow-alt-circle-right" style="margin-right:5px;"></i>
+            </li>
+        </a> 
 
+    <%})%>
+    </ul>
 <%}else{%>
     <p>No Found Authors.</p>
 <%}%>
